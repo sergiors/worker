@@ -4,7 +4,7 @@ namespace Sergiors\Worker\Logger\Handler;
 use Monolog\Logger;
 use Monolog\Handler\AbstractProcessingHandler;
 use Sergiors\Worker\WorkerInterface;
-use Sergiors\Worker\Command\NotificationCommandInterface;
+use Sergiors\Worker\Command\MessageCommandInterface;
 
 /**
  * @author Sérgio Rafael Siqueira <sergio@inbep.com.br>
@@ -17,19 +17,19 @@ class NotificationHandler extends AbstractProcessingHandler
     private $worker;
 
     /**
-     * @var NotificationCommandInterface
+     * @var MessageCommandInterface
      */
     private $command;
 
     /**
      * @param WorkerInterface $worker
-     * @param NotificationCommandInterface $command
+     * @param MessageCommandInterface $command
      * @param int $level
      * @param bool $bubble
      */
     public function __construct(
         WorkerInterface $worker,
-        NotificationCommandInterface $command,
+        MessageCommandInterface $command,
         $level = Logger::ERROR,
         $bubble = true
     ) {
