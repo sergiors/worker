@@ -1,5 +1,5 @@
 {
-    "name": "sergio/worker",
+    "name": "sergiors/worker",
     "license": "MIT",
     "authors": [
         {
@@ -21,6 +21,10 @@
         "pimple/pimple": "~1.0"
     },
     "require-dev": {
-        "monolog/monolog": "^1.17"
+        "monolog/monolog": "^1.17",
+        "phpunit/phpunit": "^5.1"
+    },
+    "suggest": {
+        "monolog/monolog": ""
     }
 }
