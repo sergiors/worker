@@ -1,0 +1,26 @@
+{
+    "name": "sergio/worker",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sérgio Rafael Siqueira",
+            "email": "sergio@inbep.com.br"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Sergiors\\Worker\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Sergiors\\Worker\\Test\\": "tests"
+        }
+    },
+    "require": {
+        "pimple/pimple": "~1.0"
+    },
+    "require-dev": {
+        "monolog/monolog": "^1.17"
+    }
+}
