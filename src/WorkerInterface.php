@@ -12,4 +12,9 @@ interface WorkerInterface
      * @param CommandInterface $command
      */
     public function put(CommandInterface $command);
+
+    /**
+     * @param \Closure $callable
+     */
+    public function running(\Closure $callable);
 }

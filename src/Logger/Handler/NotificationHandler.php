@@ -1,5 +1,5 @@
 <?php
-namespace Inbep\Component\Worker\Logger\Handler;
+namespace Sergiors\Worker\Logger\Handler;
 
 use Monolog\Logger;
 use Monolog\Handler\AbstractProcessingHandler;
