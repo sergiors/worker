@@ -16,5 +16,5 @@ interface WorkerInterface
     /**
      * @param \Closure $callable
      */
-    public function running(\Closure $callable);
+    public function run(\Closure $callable);
 }
