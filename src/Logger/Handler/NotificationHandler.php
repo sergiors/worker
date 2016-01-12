@@ -14,12 +14,12 @@ class NotificationHandler extends AbstractProcessingHandler
     /**
      * @var WorkerInterface
      */
-    private $worker;
+    protected $worker;
 
     /**
      * @var MessageCommandInterface
      */
-    private $command;
+    protected $command;
 
     /**
      * @param WorkerInterface $worker
