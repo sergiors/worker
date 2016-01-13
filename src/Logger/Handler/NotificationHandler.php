@@ -56,7 +56,7 @@ class NotificationHandler extends AbstractProcessingHandler
         }
     }
 
-    private function send($content, array $record)
+    protected function send($content, array $record)
     {
         $this->command->setSubject($record['level_name']);
         $this->command->setBody($content);
