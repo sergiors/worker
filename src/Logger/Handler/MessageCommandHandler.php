@@ -2,14 +2,14 @@
 namespace Sergiors\Worker\Logger\Handler;
 
 use Monolog\Logger;
-use Monolog\Handler\AbstractProcessingHandler;
+use Monolog\Handler\MailHandler;
 use Sergiors\Worker\WorkerInterface;
 use Sergiors\Worker\Command\MessageCommandInterface;
 
 /**
  * @author Sérgio Rafael Siqueira <sergio@inbep.com.br>
  */
-class NotificationHandler extends AbstractProcessingHandler
+class MessageCommandHandler extends MailHandler
 {
     /**
      * @var WorkerInterface
@@ -40,22 +40,9 @@ class NotificationHandler extends AbstractProcessingHandler
     }
 
     /**
-     * {@inheritdoc}
+     * @param string $content
+     * @param array $record
      */
-    public function handleBatch(array $records)
-    {
-        $messages = [];
-        foreach ($records as $record) {
-            if ($record['level'] < $this->level) {
-                continue;
-            }
-            $messages[] = $this->processRecord($record);
-        }
-        if (!empty($messages)) {
-            $this->send((string) $this->getFormatter()->formatBatch($messages), $records);
-        }
-    }
-
     protected function send($content, array $record)
     {
         $this->command->setSubject($record['level_name']);
@@ -69,10 +56,6 @@ class NotificationHandler extends AbstractProcessingHandler
      */
     protected function write(array $record)
     {
-        if ($record['level'] < $this->level) {
-            return;
-        }
-
         $this->send((string) $record['formatted'], $record);
     }
 }
