@@ -1,16 +1,10 @@
 <?php
 namespace Sergiors\Worker\Test\Command\Fixture;
 
-use Sergiors\Worker\Command\CommandInterface;
+use Sergiors\Worker\Command\Command;
 
-class HelloCommand implements CommandInterface
+class HelloCommand extends Command
 {
-    protected $container;
-
-    public function setContainer(\ArrayAccess $container)
-    {
-        $this->container = $container;
-    }
 
     public function execute()
     {
