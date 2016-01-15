@@ -7,9 +7,9 @@ namespace Sergiors\Worker\Command;
 interface CommandInterface
 {
     /**
-     * @param \Pimple $container
+     * @param \ArrayAccess $container
      */
-    public function setContainer(\Pimple $container);
+    public function setContainer(\ArrayAccess $container);
 
     public function execute();
 }

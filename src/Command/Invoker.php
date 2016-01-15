@@ -7,7 +7,7 @@ namespace Sergiors\Worker\Command;
 class Invoker
 {
     /**
-     * @var \Pimple
+     * @var \ArrayAccess
      */
     protected $container;
 
@@ -17,9 +17,9 @@ class Invoker
     protected $command;
 
     /**
-     * @param \Pimple $container
+     * @param \ArrayAccess $container
      */
-    public function __construct(\Pimple $container)
+    public function __construct(\ArrayAccess $container)
     {
         $this->container = $container;
     }

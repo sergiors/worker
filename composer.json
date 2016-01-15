@@ -7,6 +7,22 @@
             "email": "sergio@inbep.com.br"
         }
     ],
+    "require": {
+        "ramsey/uuid": "^3.1"
+    },
+    "require-dev": {
+        "monolog/monolog": "^1.17",
+        "phpunit/phpunit": "^5.1",
+        "pdepend/pdepend": "^2.2",
+        "phing/phing": "^2.13",
+        "phploc/phploc": "^3.0",
+        "phpmd/phpmd": "^2.3",
+        "sebastian/phpcpd": "^2.0",
+        "squizlabs/php_codesniffer": "^2.5"
+    },
+    "suggest": {
+        "monolog/monolog": ""
+    },
     "autoload": {
         "psr-4": {
             "Sergiors\\Worker\\": "src"
@@ -16,15 +32,5 @@
         "psr-4": {
             "Sergiors\\Worker\\Test\\": "tests"
         }
-    },
-    "require": {
-        "pimple/pimple": "~1.0"
-    },
-    "require-dev": {
-        "monolog/monolog": "^1.17",
-        "phpunit/phpunit": "^5.1"
-    },
-    "suggest": {
-        "monolog/monolog": ""
     }
 }

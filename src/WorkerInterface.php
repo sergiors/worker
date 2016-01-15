@@ -1,17 +1,25 @@
 <?php
 namespace Sergiors\Worker;
 
-use Sergiors\Worker\Command\CommandInterface;
-
 /**
  * @author Sérgio Rafael Siqueira <sergio@inbep.com.br>
  */
 interface WorkerInterface
 {
     /**
-     * @param CommandInterface $command
+     * @return string
      */
-    public function put(CommandInterface $command);
+    public function getInstanceHash();
+
+    /**
+     * @return QueueInterface
+     */
+    public function getQueue();
+
+    /**
+     * @param QueueInterface $queue
+     */
+    public function setQueue(QueueInterface $queue);
 
     /**
      * @param \Closure $callable
