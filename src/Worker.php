@@ -14,11 +14,6 @@ abstract class Worker implements WorkerInterface
     protected $instanceHash;
 
     /**
-     * @var QueueInterface
-     */
-    protected $queue;
-
-    /**
      * Worker constructor.
      */
     public function __construct()
@@ -32,21 +27,5 @@ abstract class Worker implements WorkerInterface
     public function getInstanceHash()
     {
         return $this->instanceHash;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getQueue()
-    {
-        return $this->queue;
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function setQueue(QueueInterface $queue)
-    {
-        $this->queue = $queue;
     }
 }
