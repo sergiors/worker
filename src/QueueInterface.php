@@ -9,12 +9,7 @@ use Sergiors\Worker\Command\CommandInterface;
 interface QueueInterface
 {
     /**
-     * @return CommandInterface
-     */
-    public function getCommand();
-
-    /**
      * @param CommandInterface $command
      */
-    public function setCommand(CommandInterface $command);
+    public function put(CommandInterface $command);
 }

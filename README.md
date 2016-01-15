@@ -1,5 +1,6 @@
 Worker
 ------
+[![Build Status](https://travis-ci.org/sergiors/worker.svg?branch=master)](https://travis-ci.org/sergiors/worker)
 
 [You can see an implementation here.][implementation]
 
