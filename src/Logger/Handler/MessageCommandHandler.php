@@ -48,9 +48,7 @@ class MessageCommandHandler extends MailHandler
         $this->command->setSubject($record['level_name']);
         $this->command->setBody($content);
 
-        $this->worker
-            ->getQueue()
-            ->setCommand($this->command);
+        $this->worker->put($this->command);
     }
 
     /**
