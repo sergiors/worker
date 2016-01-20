@@ -1,4 +1,5 @@
 <?php
+
 namespace Sergiors\Worker\Command;
 
 /**

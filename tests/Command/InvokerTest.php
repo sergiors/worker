@@ -1,4 +1,5 @@
 <?php
+
 namespace Sergiors\Worker\Test\Command;
 
 use Sergiors\Worker\Command\Invoker;

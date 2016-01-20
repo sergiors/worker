@@ -1,4 +1,5 @@
 <?php
+
 namespace Sergiors\Worker\Test;
 
 use Sergiors\Worker\Worker;
