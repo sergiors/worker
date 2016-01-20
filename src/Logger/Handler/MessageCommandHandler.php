@@ -1,4 +1,5 @@
 <?php
+
 namespace Sergiors\Worker\Logger\Handler;
 
 use Monolog\Logger;
@@ -22,10 +23,10 @@ class MessageCommandHandler extends MailHandler
     protected $command;
 
     /**
-     * @param WorkerInterface $worker
+     * @param WorkerInterface         $worker
      * @param MessageCommandInterface $command
-     * @param int $level
-     * @param bool $bubble
+     * @param int                     $level
+     * @param bool                    $bubble
      */
     public function __construct(
         WorkerInterface $worker,
@@ -41,7 +42,7 @@ class MessageCommandHandler extends MailHandler
 
     /**
      * @param string $content
-     * @param array $record
+     * @param array  $record
      */
     protected function send($content, array $record)
     {

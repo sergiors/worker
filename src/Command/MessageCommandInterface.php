@@ -1,4 +1,5 @@
 <?php
+
 namespace Sergiors\Worker\Command;
 
 /**
@@ -7,13 +8,13 @@ namespace Sergiors\Worker\Command;
 interface MessageCommandInterface extends CommandInterface
 {
     /**
-     * @param string $address
+     * @param string      $address
      * @param string|null $name
      */
     public function setFrom($address, $name = null);
 
     /**
-     * @param string $address
+     * @param string      $address
      * @param string|null $name
      */
     public function setTo($address, $name = null);
