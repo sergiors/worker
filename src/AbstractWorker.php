@@ -15,11 +15,17 @@ abstract class AbstractWorker implements WorkerInterface
     protected $instanceHash;
 
     /**
+     * @var \Psr\Log\LoggerInterface
+     */
+    protected $logger;
+
+    /**
      * Worker constructor.
      */
-    public function __construct()
+    public function __construct(LoggerInterface $logger = null)
     {
         $this->instanceHash = Uuid::uuid4()->toString();
+        $this->logger = $logger;
     }
 
     /**
