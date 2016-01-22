@@ -5,7 +5,7 @@ namespace Sergiors\Worker\Command;
 /**
  * @author Sérgio Rafael Siqueira <sergio@inbep.com.br>
  */
-abstract class Command implements CommandInterface
+abstract class AbstractCommand implements CommandInterface
 {
     /**
      * @var \ArrayAccess
