@@ -7,7 +7,7 @@ use Ramsey\Uuid\Uuid;
 /**
  * @author Sérgio Rafael Siqueira <sergio@inbep.com.br>
  */
-abstract class Worker implements WorkerInterface
+abstract class AbstractWorker implements WorkerInterface
 {
     /**
      * @var string
