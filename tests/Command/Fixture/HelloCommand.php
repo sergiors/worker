@@ -2,9 +2,9 @@
 
 namespace Sergiors\Worker\Test\Command\Fixture;
 
-use Sergiors\Worker\Command\Command;
+use Sergiors\Worker\Command\AbstractCommand;
 
-class HelloCommand extends Command
+class HelloCommand extends AbstractCommand
 {
     public function execute()
     {
