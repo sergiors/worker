@@ -24,8 +24,8 @@ abstract class AbstractWorker implements WorkerInterface
      */
     public function __construct(LoggerInterface $logger = null)
     {
-        $this->instanceHash = Uuid::uuid4()->toString();
         $this->logger = $logger;
+        $this->instanceHash = Uuid::uuid4()->toString();
     }
 
     /**
