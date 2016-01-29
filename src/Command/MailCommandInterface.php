@@ -5,7 +5,7 @@ namespace Sergiors\Worker\Command;
 /**
  * @author Sérgio Rafael Siqueira <sergio@inbep.com.br>
  */
-interface MessageCommandInterface extends CommandInterface
+interface MailCommandInterface extends CommandInterface
 {
     /**
      * @param string      $address

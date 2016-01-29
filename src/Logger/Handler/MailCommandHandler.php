@@ -5,12 +5,12 @@ namespace Sergiors\Worker\Logger\Handler;
 use Monolog\Logger;
 use Monolog\Handler\MailHandler;
 use Sergiors\Worker\WorkerInterface;
-use Sergiors\Worker\Command\MessageCommandInterface;
+use Sergiors\Worker\Command\MailCommandInterface;
 
 /**
  * @author Sérgio Rafael Siqueira <sergio@inbep.com.br>
  */
-class MessageCommandHandler extends MailHandler
+class MailCommandHandler extends MailHandler
 {
     /**
      * @var WorkerInterface
@@ -23,14 +23,14 @@ class MessageCommandHandler extends MailHandler
     protected $command;
 
     /**
-     * @param WorkerInterface         $worker
-     * @param MessageCommandInterface $command
-     * @param int                     $level
-     * @param bool                    $bubble
+     * @param WorkerInterface      $worker
+     * @param MailCommandInterface $command
+     * @param int                  $level
+     * @param bool                 $bubble
      */
     public function __construct(
         WorkerInterface $worker,
-        MessageCommandInterface $command,
+        MailCommandInterface $command,
         $level = Logger::ERROR,
         $bubble = true
     ) {
