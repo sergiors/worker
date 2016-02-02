@@ -2,10 +2,17 @@
 
 namespace Sergiors\Worker\Test\Command\Fixture;
 
-use Sergiors\Worker\Command\AbstractCommand;
+use Sergiors\Worker\Command\CommandInterface;
 
-class HelloCommand extends AbstractCommand
+class HelloCommand implements CommandInterface
 {
+    protected $container;
+
+    public function setContainer($container)
+    {
+        $this->container = $container;
+    }
+
     public function execute()
     {
         echo $this->container['hello'];

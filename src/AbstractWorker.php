@@ -3,6 +3,7 @@
 namespace Sergiors\Worker;
 
 use Ramsey\Uuid\Uuid;
+use Psr\Log\LoggerInterface;
 
 /**
  * @author Sérgio Rafael Siqueira <sergio@inbep.com.br>
@@ -15,7 +16,7 @@ abstract class AbstractWorker implements WorkerInterface
     protected $instanceHash;
 
     /**
-     * @var \Psr\Log\LoggerInterface
+     * @var LoggerInterface
      */
     protected $logger;
 

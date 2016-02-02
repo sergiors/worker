@@ -8,9 +8,9 @@ namespace Sergiors\Worker\Command;
 interface CommandInterface
 {
     /**
-     * @param \ArrayAccess $container
+     * @param $container
      */
-    public function setContainer(\ArrayAccess $container);
+    public function setContainer($container);
 
     public function execute();
 }

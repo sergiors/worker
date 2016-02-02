@@ -7,9 +7,6 @@ namespace Sergiors\Worker\Command;
  */
 class Invoker
 {
-    /**
-     * @var \ArrayAccess
-     */
     protected $container;
 
     /**
@@ -18,9 +15,9 @@ class Invoker
     protected $command;
 
     /**
-     * @param \ArrayAccess $container
+     * @param $container
      */
-    public function __construct(\ArrayAccess $container)
+    public function __construct($container)
     {
         $this->container = $container;
     }
