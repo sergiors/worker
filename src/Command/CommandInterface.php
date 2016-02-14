@@ -7,10 +7,5 @@ namespace Sergiors\Worker\Command;
  */
 interface CommandInterface
 {
-    /**
-     * @param $container
-     */
-    public function setContainer($container);
-
     public function execute();
 }

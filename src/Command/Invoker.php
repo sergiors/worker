@@ -7,20 +7,10 @@ namespace Sergiors\Worker\Command;
  */
 class Invoker
 {
-    protected $container;
-
     /**
      * @var CommandInterface
      */
     protected $command;
-
-    /**
-     * @param $container
-     */
-    public function __construct($container)
-    {
-        $this->container = $container;
-    }
 
     /**
      * @param CommandInterface $command
@@ -28,7 +18,6 @@ class Invoker
     public function setCommand(CommandInterface $command)
     {
         $this->command = $command;
-        $this->command->setContainer($this->container);
     }
 
     public function run()

@@ -6,15 +6,8 @@ use Sergiors\Worker\Command\CommandInterface;
 
 class HelloCommand implements CommandInterface
 {
-    protected $container;
-
-    public function setContainer($container)
-    {
-        $this->container = $container;
-    }
-
     public function execute()
     {
-        echo $this->container['hello'];
+        echo 'hello';
     }
 }

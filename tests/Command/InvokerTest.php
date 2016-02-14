@@ -14,14 +14,8 @@ class InvokerTest extends \PHPUnit_Framework_TestCase
     {
         $this->expectOutputString('hello');
 
-        $container = $this->getMock('ArrayAccess');
-        $container
-            ->expects($this->any())
-            ->method('offsetGet')
-            ->will($this->returnValue('hello'));
-
         $command = new HelloCommand();
-        $invoker = new Invoker($container);
+        $invoker = new Invoker();
         $invoker->setCommand($command);
         $invoker->run();
     }

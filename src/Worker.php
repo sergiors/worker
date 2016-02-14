@@ -8,7 +8,7 @@ use Psr\Log\LoggerInterface;
 /**
  * @author Sérgio Rafael Siqueira <sergio@inbep.com.br>
  */
-abstract class AbstractWorker implements WorkerInterface
+abstract class Worker implements WorkerInterface
 {
     /**
      * @var string
